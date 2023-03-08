@@ -1,0 +1,9 @@
+cd /your-project-folder
+php artisan optimize
+chown -R nginx:nginx .
+find . -type f -exec chmod 664 {} \;
+find . -type d -exec chmod 775 {} \;
+
+
+chmod -R 777 storage/framework storage/logs
+

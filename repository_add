@@ -1,0 +1,5 @@
+#add to repository
+
+git add * / git add nama file
+git commit -m "ini adalah update"
+git push   / origin master

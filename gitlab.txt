@@ -1,0 +1,77 @@
+####################################################################
+
+This issue happens after cloning a forked branch, and disappears after rebasing from the upstream.
+
+Before rebasing:
+
+#  git describe --tags
+fatal: No names found, cannot describe anything.
+After rebasing:
+
+# git describe --tags
+v0.1.xxxx
+The command to rebase:
+
+git remote add upstream xxxxx
+git checkout main
+git remote prune origin
+git fetch -p upstream 
+git rebase upstream/main
+
+
+
+Create a new repository
+
+git clone https://gitlab.com/mac0285/laravel9ims.git
+cd ims-lv8
+git switch -c main
+touch README.md
+git add README.md
+git commit -m "backup script"
+git push -u origin main
+
+Push an existing folder
+
+git config --global user.name "mac0285"
+git config --global user.email "jiwa.yang.mati.rasa@gmail.com"
+git config --global --list
+
+git init
+git remote add origin https://gitlab.com/mac0285/laravel9ims.git
+
+
+cd existing_folder
+git init --initial-branch=lover
+git remote add origin https://gitlab.com/mac0285/laravel9ims.git
+git add .
+git commit -m "config setting web"
+git push -u origin lover
+####################################################################
+Push an existing Git repository
+
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin https://gitlab.com/mac0285/laravel9ims.git
+git push -u origin --all
+git push -u origin --tags
+####################################################################
+if  upload error " git config http.postBuffer 524288000 "  / "git config --global http.postBuffer 524288000"
+
+git remote remove origin
+git remote add origin https://github..com/user/repo  "https://gitlab.com/mac0285/laravel9ims.git"
+git push --set-upstream origin master
+
+then run "git push -u origin main "
+
+--- force push origin ----
+
+login using email 
+
+git add .
+git commit -m "Initial commit"
+
+git push -f -u origin 
+git push --set-upstream origin  main
+
+####################################################################
+https://stackoverflow.com/questions/20467179/git-push-rejected-non-fast-forward
